@@ -107,10 +107,9 @@ while True:
         final_gray = cv2.resize(final_gray, (128, 128), interpolation = Image.ANTIALIAS)
         final_face = cv2.resize(final_face, (128, 128), interpolation = Image.ANTIALIAS)
         cv2.imshow('face', final_face)
-        if cv2.waitKey(30) & 0xff == ord('y'):
-            cv2.imwrite('data/' + str(userid) + '/img' + str(number) + '.jpg', final_face)
-            print('making' + str(number))
-            number = number + 1
+        cv2.imwrite('data/' + str(userid) + '/img' + str(number) + '.jpg', final_face)
+        print('Saving img' + str(number) + '.jpg')
+        number = number + 1
         
     k = cv2.waitKey(30) & 0xff
     if k == 27:
