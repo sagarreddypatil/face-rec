@@ -9,6 +9,7 @@ import os
 number = 0
 userid = 0
 
+vid_path = input("Video Path: ")
 number = int(input("Starting number: "))
 userid = int(input("User ID: "))
 
@@ -38,7 +39,7 @@ def rotate(point, angle, center):
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(vid_path)
 
 while True:
     ret, img = cap.read()
