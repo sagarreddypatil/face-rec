@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from skimage.feature import local_binary_pattern
 from math import *
-from PIL import Image as Image
+from PIL import Image
 import PIL.ImageOps
 import os
 from model import Model
