@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture('ya.mov')
+cap = cv2.VideoCapture('hmmm.mov')
 
 while(cap.isOpened()):
     ret, frame = cap.read()
