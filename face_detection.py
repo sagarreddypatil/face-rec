@@ -41,7 +41,7 @@ def rotate(point, angle, center):
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
 
-cap = AsyncCap("obama.mp4")
+cap = AsyncCap("video.mp4")
 
 while True:
     ret, img = cap.read()
