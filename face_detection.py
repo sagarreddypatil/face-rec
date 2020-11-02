@@ -41,7 +41,7 @@ def rotate(point, angle, center):
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
 
-cap = AsyncCap("video.mp4")
+cap = AsyncCap("test.mp4", fps=30)
 
 while True:
     ret, img = cap.read()
@@ -152,4 +152,6 @@ while True:
     k = cv2.waitKey(30) & 0xFF
     if k == 27:
         break
+
+cap.stop()
 cv2.destroyAllWindows()

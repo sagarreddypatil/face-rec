@@ -10,12 +10,16 @@ class AsyncCap:
         self.fps = fps
         self.thread = Thread(target=self.runner)
         self.thread.start()
+        self.stopped = False
+
+    def stop(self):
+        self.stopped = True
 
     def read(self):
         return self.frame
 
     def runner(self):
         while True:
-            start = time.time()
             self.frame = self.cap.read()
-            time.sleep(max(0, (1 / self.fps) - (time.time() - start)))
+            if(self.stopped):
+                break
